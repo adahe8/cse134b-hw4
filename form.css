@@ -30,9 +30,20 @@ input[type="textarea"] {
 input[type="submit"] {
   margin: auto;
   height: 2rem;
-  width: 100%;
+  width: 40%;
   background-color: var(--accent-2);
   font-family: "KoPub Batang", serif;
   font-size: 16px;
   border-radius: 8px;
+}
+
+input:invalid,
+textarea:invalid {
+  border: 1px solid red;
+  color: red;
+}
+
+input:valid {
+  border: 1px solid black;
+  color: black;
 }
