@@ -8,7 +8,7 @@
   <body>
     <form action="https://httpbin.org/post" method="post">
       <h2>Contact Me!</h2>
-      <div class="question">
+      <form-field>
         <label for="name">First & Last Name *</label>
         <input
           type="text"
@@ -19,9 +19,9 @@
           required
           maxlength="100"
         />
-      </div>
+      </form-field>
 
-      <div class="question">
+      <form-field>
         <label for="email">Email *</label>
         <input
           type="email"
@@ -32,9 +32,9 @@
           required
           minlength="6"
         />
-      </div>
+      </form-field>
 
-      <div class="question">
+      <form-field>
         <label for="linkedin">LinkedIn</label>
         <input
           type="text"
@@ -44,9 +44,9 @@
           title="Put in a proper linkedin!"
           minlength="14"
         />
-      </div>
+      </form-field>
 
-      <div class="question">
+      <form-field>
         <label for="comments">Comments (2000 character limit) *</label>
         <textarea
           id="comments"
@@ -58,7 +58,7 @@
           minlength="1"
           maxlength="2000"
         ></textarea>
-      </div>
+      </form-field>
 
       <input type="hidden" id="botfield" name="botfield" value="true" />
 

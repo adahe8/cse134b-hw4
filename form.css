@@ -19,7 +19,7 @@ form {
   border-radius: 8px;
 }
 
-.question {
+form-field {
   display: grid;
 }
 
