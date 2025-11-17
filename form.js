@@ -2,6 +2,7 @@ const fullname = document.getElementById("name");
 const email = document.getElementById("email");
 const linkedin = document.getElementById("linkedin");
 const comments = document.getElementById("comments");
+const countdown = document.getElementById("charcount");
 // get all inputs
 const inputs = document.querySelectorAll("input, textarea");
 const required = document.querySelectorAll(
@@ -70,5 +71,21 @@ comments.addEventListener("input", (event) => {
   } else {
     comments.classList.remove("invalid");
     comments.setCustomValidity("");
+  }
+});
+
+// counting down characters
+const maxLength = comments.getAttribute("maxlength");
+comments.addEventListener("input", function () {
+  let currLength = this.value.length;
+  countdown.textContent = `(${maxLength - currLength} chars remaining)`;
+  if (maxLength - currLength < 100) {
+    countdown.style.color = "red";
+    countdown.style.fontStyle = "bold";
+  } else if (maxLength - currLength < 200) {
+    countdown.style.color = "orange";
+    countdown.style.fontStyle = "normal";
+  } else {
+    countdown.style.color = "black";
   }
 });

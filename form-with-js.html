@@ -50,7 +50,9 @@
       </form-field>
 
       <form-field>
-        <label for="comments">Comments (2000 character limit) *</label>
+        <label for="comments"
+          >Comments <span id="charcount">(1000 chars remaining)</span> *</label
+        >
         <textarea
           id="comments"
           name="comments"
@@ -59,7 +61,7 @@
           placeholder="Leave a message for Ada..."
           required
           minlength="1"
-          maxlength="2000"
+          maxlength="1000"
         ></textarea>
       </form-field>
 
@@ -71,7 +73,10 @@
         Error Messages
         <p>Invalid character entered!</p>
       </output>
-      <output id="information"> Information </output>
+      <output id="information">
+        Information
+        <p></p>
+      </output>
 
       <script src="form.js"></script>
     </form>
