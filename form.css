@@ -58,7 +58,7 @@ output {
   flex-direction: column;
   height: 10%;
 }
-output p {
+#errors p {
   opacity: 0;
   text-align: center;
   align-content: center;
@@ -68,7 +68,16 @@ output p {
   padding: 2px;
   border-radius: var(--rounding);
 }
-
+#information p {
+  opacity: 0;
+  text-align: center;
+  align-content: center;
+  transition: opacity 0.5s ease-out;
+  background-color: var(--accent-1);
+  color: white;
+  padding: 2px;
+  border-radius: var(--rounding);
+}
 .invalid-entry {
   background-color: rgba(255, 0, 0, 0.3);
 }
