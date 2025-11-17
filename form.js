@@ -10,6 +10,12 @@ const required = document.querySelectorAll(
 );
 // output fields
 const erroroutput = document.getElementById("errors");
+// grab the submit button for submission handling
+const form = document.querySelector("form");
+
+// grab formError hidden field
+const formErrors = document.getElementById("form-errors");
+const form_errors = [];
 
 // temporary error message function
 // have default time shown be 3 secs
@@ -35,6 +41,11 @@ inputs.forEach((field) => {
   field.addEventListener("blur", function () {
     if (!field.checkValidity()) {
       field.classList.add("invalid");
+      form_errors.push({
+        field: field.name,
+        value: field.value,
+        reason: field.validationMessage,
+      });
     } else {
       field.classList.remove("invalid");
     }
@@ -88,4 +99,10 @@ comments.addEventListener("input", function () {
   } else {
     countdown.style.color = "black";
   }
+});
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  formErrors.value = JSON.stringify(form_errors);
+  form.submit();
 });
