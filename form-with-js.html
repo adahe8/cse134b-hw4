@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <title>Contact Form</title>
     <link rel="stylesheet" href="main.css" />
-    <script></script>
+    <style>
+      form {
+        color: black;
+        background: linear-gradient(180deg, #90c6f0 0%, #ffe0b6 100%);
+      }
+    </style>
   </head>
   <body>
+    <nav>
+      <img src="assets/logo.png" alt="blue heart logo" />
+      <a href="index.html" data-current>Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="form-with-js.html">Message Me</a>
+      <a href="assets/Ada_He_resume.pdf">Resume</a>
+    </nav>
     <form action="https://httpbin.org/post" method="post">
       <h2>Contact Me!</h2>
       <form-field>
@@ -79,7 +92,6 @@
         Information
         <p>Info goes here</p>
       </output>
-
       <script src="form.js"></script>
     </form>
   </body>

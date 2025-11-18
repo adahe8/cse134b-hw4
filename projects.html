@@ -7,8 +7,12 @@
     <link rel="icon" href="assets/heart.png" sizes="any" />
     <link rel="stylesheet" href="main.css" />
     <style>
-      html {
-        background: linear-gradient(180deg, #90c6f0 0%, #fcf4e9 100%);
+      body {
+        background: linear-gradient(
+          180deg,
+          var(--end-blue) 0%,
+          var(--end-peach) 100%
+        );
         min-height: 100vh;
       }
     </style>
@@ -18,11 +22,13 @@
     <header>
       <nav>
         <img src="assets/logo.png" alt="blue heart logo" />
-        <a href="index.html">Home</a>
+        <a href="index.html" data-current>Home</a>
         <a href="aboutme.html">About Me</a>
-        <a href="projects.html" data-current>Projects</a>
-        <a href="assets/Ada_resume.pdf">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="form-with-js.html">Message Me</a>
+        <a href="assets/Ada_He_resume.pdf">Resume</a>
       </nav>
+      <button class="toggle">Change <span id="theme-label">Theme</span></button>
       <section class="image-text-header" id="project-header">
         <picture>
           <source srcset="assets/projectsphoto.avif" type="image/avif" />
@@ -73,5 +79,6 @@
         />
       </a>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
